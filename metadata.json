@@ -1,0 +1,5 @@
+{
+  "name": "Email Shooting App",
+  "description": "A comprehensive email marketing tool with Admin and User roles, SMTP configuration, CSV contact management, and AI-powered email drafting using Gemini.",
+  "requestFramePermissions": []
+}

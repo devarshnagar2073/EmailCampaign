@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Shooting App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: ["class"],
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              border: "hsl(var(--border))",
+              input: "hsl(var(--input))",
+              ring: "hsl(var(--ring))",
+              background: "hsl(var(--background))",
+              foreground: "hsl(var(--foreground))",
+              primary: {
+                DEFAULT: "hsl(var(--primary))",
+                foreground: "hsl(var(--primary-foreground))",
+              },
+              secondary: {
+                DEFAULT: "hsl(var(--secondary))",
+                foreground: "hsl(var(--secondary-foreground))",
+              },
+              destructive: {
+                DEFAULT: "hsl(var(--destructive))",
+                foreground: "hsl(var(--destructive-foreground))",
+              },
+              muted: {
+                DEFAULT: "hsl(var(--muted))",
+                foreground: "hsl(var(--muted-foreground))",
+              },
+              accent: {
+                DEFAULT: "hsl(var(--accent))",
+                foreground: "hsl(var(--accent-foreground))",
+              },
+              popover: {
+                DEFAULT: "hsl(var(--popover))",
+                foreground: "hsl(var(--popover-foreground))",
+              },
+              card: {
+                DEFAULT: "hsl(var(--card))",
+                foreground: "hsl(var(--card-foreground))",
+              },
+            },
+            borderRadius: {
+              lg: "var(--radius)",
+              md: "calc(var(--radius) - 2px)",
+              sm: "calc(var(--radius) - 4px)",
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      :root {
+        /* Vibrant Indigo Theme */
+        --background: 220 14% 96%; /* Softer gray background */
+        --foreground: 224 71% 4%;
+        
+        --card: 0 0% 100%;
+        --card-foreground: 224 71% 4%;
+        
+        --popover: 0 0% 100%;
+        --popover-foreground: 224 71% 4%;
+        
+        /* Vibrant Primary: Indigo 600 */
+        --primary: 250 84% 54%; 
+        --primary-foreground: 210 40% 98%;
+        
+        /* Accents */
+        --secondary: 250 20% 96%;
+        --secondary-foreground: 250 84% 54%;
+        
+        --muted: 220 14% 96%;
+        --muted-foreground: 220 8% 46%;
+        
+        --accent: 250 20% 96%;
+        --accent-foreground: 250 84% 54%;
+        
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 220 13% 91%;
+        --input: 220 13% 91%;
+        --ring: 250 84% 54%;
+        
+        --radius: 0.75rem; /* More rounded */
+      }
+      
+      .dark {
+        --background: 224 71% 4%;
+        --foreground: 210 40% 98%;
+        
+        --card: 224 71% 6%;
+        --card-foreground: 210 40% 98%;
+        
+        --popover: 224 71% 4%;
+        --popover-foreground: 210 40% 98%;
+        
+        --primary: 250 84% 60%;
+        --primary-foreground: 210 40% 98%;
+        
+        --secondary: 215 28% 17%;
+        --secondary-foreground: 210 40% 98%;
+        
+        --muted: 215 28% 17%;
+        --muted-foreground: 215 20% 65%;
+        
+        --accent: 215 28% 17%;
+        --accent-foreground: 210 40% 98%;
+        
+        --destructive: 0 63% 31%;
+        --destructive-foreground: 210 40% 98%;
+        
+        --border: 215 28% 17%;
+        --input: 215 28% 17%;
+        --ring: 250 84% 60%;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: hsl(var(--muted-foreground) / 0.3); 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: hsl(var(--muted-foreground) / 0.5); 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^6.22.3",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "clsx": "https://aistudiocdn.com/clsx@^2.1.1",
+    "tailwind-merge": "https://aistudiocdn.com/tailwind-merge@^2.3.0",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
